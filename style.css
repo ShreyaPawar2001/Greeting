@@ -1,19 +1,24 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
-    display: flex;
+    /* display: flex;s */
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow-y: scroll; /* Enable vertical scrolling */
     background-color: #f3f4f6;
-    overflow: hidden;
-    flex-direction: column; /* Ensure elements are stacked vertically */
+    /* overflow: hidden; */
+    /* flex-direction: column; Ensure elements are stacked vertically */
 }
+html, body {
+    border: 2px solid red;
+}
+
 
 .container {
     text-align: center;
-    margin-top: 200px;
+    /* margin-top: 200px; */
 }
 
 .girl img {
@@ -35,7 +40,7 @@ body {
     font-size: 24px;
     color: #ff4d4d;
     font-weight: bold;
-    margin: 0;
+    /* margin: 0; */
     transition: opacity 1s ease-in-out;
 }
 
@@ -45,7 +50,7 @@ body {
     font-weight: bold;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    margin: 0;
+    /* margin: 0; */
     text-align: center; /* Center text */
 }
 
@@ -61,6 +66,7 @@ body {
 .tree-decoration img {
     height: 450px;
     border-radius: 50%;
+    /* margin-top: -570px;  */
 }
 
 .gift1 {
@@ -80,12 +86,15 @@ body {
     border: solid 2px #040404;
     color: deeppink;
     font-weight: 600;
-    margin: 10px 0;
+    /* margin: 10px 0; */
 }
 
 .gifts-container {
     display: none;
-    margin: 20px;
+    /* margin: 20px;
+     */
+     flex-wrap: wrap;
+
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -157,7 +166,7 @@ body {
 
     .tree-decoration p {
         font-size: 18px;  /* Smaller font for mobile */
-        margin-top: 10px;
+        /* margin-top: 10px; */
     }
 }
 
@@ -169,13 +178,13 @@ body {
     }
 
     .girl img {
-        margin-top: 50px;
+        /* margin-top: 50px; */
         width: 130px;  /* Slightly smaller for 6/7/8 Plus models */
     }
 
     .tree-decoration img {
         height: 400px;  /* Slightly smaller */
-        margin-top: -315px;  
+        
     }
 
     .gift1 {
@@ -194,7 +203,7 @@ body {
 
     .tree-decoration p {
         font-size: 20px;  /* Adjust text size for readability */
-        margin: 26px;
+        /* margin: 26px; */
     }
 }
 
@@ -214,13 +223,13 @@ body {
 
     .tree-decoration img {
         height: 450px;
-        margin-top: 10px;
+        /* margin-top: 10px; */
     }
 
     .gift1 {
         width: 100px;
         height: 100px;
-        margin-left: 40px;
+        /* margin-left: 40px; */
     }
 
     .btnGift {
@@ -256,5 +265,7 @@ body {
     -webkit-background-clip: text; /* Apply the gradient to text */
     background-clip: text;
     animation: blink 1.5s step-end infinite; /* Blinking effect */
-    margin-top: 20px;
+    /* margin-top: 20px;
+    
+    */
 }
