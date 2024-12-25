@@ -8,10 +8,12 @@ body {
     height: 100vh;
     background-color: #f3f4f6;
     overflow: hidden;
+    flex-direction: column; /* Ensure elements are stacked vertically */
 }
 
 .container {
     text-align: center;
+    margin-top: 200px;
 }
 
 .girl img {
@@ -44,21 +46,21 @@ body {
     opacity: 0;
     transition: opacity 1s ease-in-out;
     margin: 0;
+    text-align: center; /* Center text */
 }
 
 .tree-decoration {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column; /* Center the tree vertically */
+    /* margin: 0 auto; Center the tree horizontally */
+    /* height: 100vh; */
 }
 
 .tree-decoration img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 450px;
     border-radius: 50%;
-    margin: -49px;
 }
 
 .gift1 {
@@ -173,6 +175,7 @@ body {
 
     .tree-decoration img {
         height: 400px;  /* Slightly smaller */
+        margin-top: -315px;  
     }
 
     .gift1 {
@@ -195,13 +198,14 @@ body {
     }
 }
 
-/* For larger devices, tablets and small laptops */
+/* For larger devices, tablets, and small laptops (starting from 1023px wide) */
 @media (min-width: 1023px) {
     body {
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         height: 100vh;
         padding: 0;
+        text-align: center; /* Ensure text is centered */
     }
 
     .girl img {
@@ -210,6 +214,7 @@ body {
 
     .tree-decoration img {
         height: 450px;
+        margin-top: 10px;
     }
 
     .gift1 {
@@ -231,6 +236,7 @@ body {
         font-size: 24px;
     }
 }
+
 /* Blinking effect for "Thank You" text */
 @keyframes blink {
     0%, 100% {
