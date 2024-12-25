@@ -1,0 +1,254 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.girl img {
+    width: 150px;
+    border-radius: 50%;
+    animation: wave 2s infinite;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.greeting {
+    font-size: 24px;
+    color: #ff4d4d;
+    font-weight: bold;
+    margin: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.christmas-greeting {
+    font-size: 24px;
+    color: #ff4d4d;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    margin: 0;
+}
+
+.tree-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tree-decoration img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    border-radius: 50%;
+    margin: -49px;
+}
+
+.gift1 {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.christmas-greeting {
+    opacity: 1;
+}
+
+.btnGift {
+    width: 100px;
+    border-radius: 19%;
+    border: solid 2px #040404;
+    color: deeppink;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.gifts-container {
+    display: none;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gift1 {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gift1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gift1:hover {
+    transform: translateY(-10px) rotateY(15deg) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    filter: brightness(1.2) contrast(1.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+}
+
+.btnGift:hover {
+    background-color: #c3bbbb;
+}
+
+/* Responsive Styles */
+
+/* For iPhones (up to 576px wide) */
+@media (max-width: 576px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: auto;
+        padding: 10px;
+    }
+
+    .girl img {
+        width: 120px;  /* Slightly smaller for iPhone */
+    }
+
+    .tree-decoration img {
+        height: 350px;  /* Reduced height for smaller screens */
+    }
+
+    .gift1 {
+        width: 80px;
+        height: 80px;  /* Reduced gift size for better fit */
+    }
+
+    .gifts-container {
+        flex-direction: column;
+    }
+
+    .btnGift {
+        width: 50px;
+        font-size: 14px;
+    }
+
+    .christmas-greeting {
+        font-size: 15px;  /* Smaller font for better fit */
+    }
+
+    .tree-decoration p {
+        font-size: 18px;  /* Smaller font for mobile */
+        margin-top: 10px;
+    }
+}
+
+/* For larger iPhones (up to 768px wide) */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .girl img {
+        margin-top: 50px;
+        width: 130px;  /* Slightly smaller for 6/7/8 Plus models */
+    }
+
+    .tree-decoration img {
+        height: 400px;  /* Slightly smaller */
+    }
+
+    .gift1 {
+        width: 90px;
+        height: 90px;
+    }
+
+    .btnGift {
+        width: 90px;
+        font-size: 16px;
+    }
+
+    .christmas-greeting {
+        font-size: 20px;  /* Increased font size for better readability */
+    }
+
+    .tree-decoration p {
+        font-size: 20px;  /* Adjust text size for readability */
+        margin: 26px;
+    }
+}
+
+/* For larger devices, tablets and small laptops */
+@media (min-width: 1023px) {
+    body {
+        flex-direction: row;
+        justify-content: center;
+        height: 100vh;
+        padding: 0;
+    }
+
+    .girl img {
+        width: 150px;
+    }
+
+    .tree-decoration img {
+        height: 450px;
+    }
+
+    .gift1 {
+        width: 100px;
+        height: 100px;
+        margin-left: 40px;
+    }
+
+    .btnGift {
+        width: 100px;
+        font-size: 18px;
+    }
+
+    .christmas-greeting {
+        font-size: 24px;
+    }
+
+    .tree-decoration p {
+        font-size: 24px;
+    }
+}
+/* Blinking effect for "Thank You" text */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+#thankYouText {
+    display: none; /* Initially hidden */
+    font-size: 24px;
+    font-weight: bold;
+    color: transparent;
+    background: linear-gradient(45deg, #000000, #f200ff, #c32525); /* Christmas gradient colors */
+    -webkit-background-clip: text; /* Apply the gradient to text */
+    background-clip: text;
+    animation: blink 1.5s step-end infinite; /* Blinking effect */
+    margin-top: 20px;
+}
